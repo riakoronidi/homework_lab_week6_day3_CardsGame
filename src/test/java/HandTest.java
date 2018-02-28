@@ -14,6 +14,7 @@ public class HandTest {
     public void before(){
         this.hand = new Hand();
         deck = new Deck();
+        card = new Card(Suit.CLUBS, Value.EIGHT);
     }
 
     @Test
@@ -25,7 +26,6 @@ public class HandTest {
     @Test
     public void getTotalOfCards(){
         hand.addCardToHand(card);
-        int result = card.getValueFromEnum();
-        assertEquals(result, hand.total());
+        assertEquals(8, hand.getTotal());
     }
 }

@@ -2,23 +2,25 @@ import java.util.ArrayList;
 
 public class Hand {
 
-    private ArrayList<Card> hand;
+    private ArrayList<Card> cards;
 
     public Hand() {
-        this.hand = new ArrayList<Card>();
+        this.cards = new ArrayList<Card>();
     }
 
     public void addCardToHand(Card card){
-        hand.add(card);
+        cards.add(card);
     }
 
     public int getHandCount(){
-        return this.hand.size();
+        return this.cards.size();
     }
 
-    public int total(){
+    public int getTotal(){
         int total = 0;
-        total += this.hand.getValue();
+        for (Card card : this.cards){
+            total += card.getValueFromEnum();
+        }
         return total;
     }
 
