@@ -28,7 +28,7 @@ public class Deck {
         return this.cards.get(0);
     }
 
-    public ArrayList<Card> getCard() {
+    public ArrayList<Card> getCards() {
         return new ArrayList<>(cards);
     }
 

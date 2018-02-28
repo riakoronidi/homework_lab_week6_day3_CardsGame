@@ -24,7 +24,7 @@ public class DeckTest {
     @Test
     public void canReturnCard(){
         deck.populate();
-        ArrayList results = deck.getCard();
+        ArrayList results = deck.getCards();
         Card randomAnswer = deck.deal();
         assertTrue(results.contains(randomAnswer));
     }
